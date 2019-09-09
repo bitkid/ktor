@@ -18,7 +18,7 @@ kotlin {
             current.addAll(listOf(getByName("macosX64"), getByName("linuxX64"), getByName("mingwX64")))
         }
 
-        val paths = listOf("C:/msys64/mingw64/include", "C:/Tools/msys64/mingw64/include")
+        val paths = listOf("C:/msys64/mingw64/include/curl", "C:/Tools/msys64/mingw64/include/curl")
         current.filterIsInstance<KotlinNativeTarget>().forEach { platform ->
             platform.compilations.getByName("main") {
                 val libcurl by cinterops.creating {
